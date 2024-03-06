@@ -21,6 +21,8 @@ import { Gutter } from '../../_components/Gutter'
 export const dynamic = 'force-dynamic'
 
 import classes from './index.module.scss'
+import CategoryCard from '../../_components/Categories/CategoryCard'
+import Categories from '../../_components/Categories'
 
 export default async function Page({ params: { slug = 'home' } }) {
   const { isEnabled: isDraftMode } = draftMode()
@@ -63,7 +65,9 @@ export default async function Page({ params: { slug = 'home' } }) {
         <section>
           <Hero {...hero} />
 
-          <Gutter>{''}</Gutter>
+          <Gutter className={classes.home}>
+            <Categories categories={categories} />
+          </Gutter>
         </section>
       ) : (
         <>
