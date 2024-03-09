@@ -40,4 +40,4 @@ const Products = async () => {
   )
 }
 
-export default Products
+export default Products;
