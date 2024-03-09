@@ -1,21 +1,21 @@
-import React from 'react';
-import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import React from 'react'
+import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 
-import { Page, Settings } from '../../../payload/payload-types';
-import { staticCart } from '../../../payload/seed/cart-static';
-import { fetchDoc } from '../../_api/fetchDoc';
-import { fetchSettings } from '../../_api/fetchGlobals';
-import { Blocks } from '../../_components/Blocks';
-import { Gutter } from '../../_components/Gutter';
-import { generateMeta } from '../../_utilities/generateMeta';
-import { CartPage } from './CartPage';
+import { Page, Settings } from '../../../payload/payload-types'
+import { staticCart } from '../../../payload/seed/cart-static'
+import { fetchDoc } from '../../_api/fetchDoc'
+import { fetchSettings } from '../../_api/fetchGlobals'
+import { Blocks } from '../../_components/Blocks'
+import { Gutter } from '../../_components/Gutter'
+import { generateMeta } from '../../_utilities/generateMeta'
+import { CartPage } from './CartPage'
 
-import classes from './index.module.scss';
+import classes from './index.module.scss'
 
 // Force this page to be dynamic so that Next.js does not cache it
 // See the note in '../[slug]/page.tsx' about this
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic'
 
 export default async function Cart() {
   let page: Page | null = null
